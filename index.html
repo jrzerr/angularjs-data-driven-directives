@@ -55,9 +55,20 @@
         <hr/>
         
         <div>
-          <div>View of the data as JSON</div>
+          <h2>View of the domain data as JSON (GameModel + PlayerGameModel)</h2>
           <div class="jsoncode"><pre>{{ games | json }}</pre></div>
         </div>
+        
+        <div>
+          <h2>View of the Column Chart data as JSON (ColumnChartModel)</h2>
+          <div class="jsoncode"><pre>{{ columnChartOptions.model.getData() | json }}</pre></div>
+        </div>
+
+        <div>
+          <h2>View of the Line Chart data as JSON (LineChartModel)</h2>
+          <div class="jsoncode"><pre>{{ lineChartOptions.model.getData() | json }}</pre></div>
+        </div>        
+        
       </div>
     </div>
   </body>
