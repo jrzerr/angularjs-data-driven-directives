@@ -1,0 +1,46 @@
+column-chart svg {
+  margin: 15px;
+}
+
+column-chart rect {
+  fill: steelblue;
+}
+
+column-chart .title {
+  font-size: 1.5em;
+}
+
+line-chart svg {
+  margin: 15px;
+}
+
+line-chart .title {
+  font-size: 1.5em;
+}
+
+line-chart .x.axis path {
+  display: none;
+}
+
+line-chart .line {
+  fill: none;
+  stroke: steelblue;
+  stroke-width: 1.5px;
+}
+
+body {
+  font-size: 120%;
+  text-align: center;
+}
+
+select {
+  font-size: 1em;
+  border: 0;
+  margin: 0px 25px 0px 5px;
+}
+
+.jsoncode {
+  text-align: left;
+  width: 480px;
+  margin: auto;
+}

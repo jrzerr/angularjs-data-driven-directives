@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="UTF-8">
+    <script data-require="jquery@1.11.0" data-semver="1.11.0" src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.11.0/jquery.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.17/angular.js" data-semver="1.2.17" data-require="angular.js@1.2.17"></script>
+    <script data-require="angular-mocks@1.2.17" data-semver="1.2.17" src="https://code.angularjs.org/1.2.17/angular-mocks.js"></script>
+    <script data-require="d3@3.4.6" data-semver="3.4.6" src="//cdnjs.cloudflare.com/ajax/libs/d3/3.4.6/d3.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <script src="app.js"></script>
+    <script src="players/PlayerGameModel.js"></script>
+    <script src="players/PlayerGameModelMapper.js"></script>
+    <script src="games/GameModelMapper.js"></script>
+    <script src="games/GameModel.js"></script>
+    <script src="charts/ChartModel.js"></script>
+    <script src="charts/ChartView.js"></script>
+    <script src="charts/columnchart/ColumnChartModel.js"></script>
+    <script src="charts/linechart/LineChartModel.js"></script>
+    <script src="charts/ChartOptions.js"></script>
+    <script src="charts/columnchart/ColumnChartOptions.js"></script>
+    <script src="charts/linechart/LineChartOptions.js"></script>
+    <script src="games/GameModelToColumnChartModelMapper.js"></script>
+    <script src="players/PlayerGameModelToLineChartModelMapper.js"></script>
+    <script src="app-controller.js"></script>
+    <script src="charts/columnchart/ColumnChartView.js"></script>
+    <script src="charts/columnchart/ColumnChart.js"></script>
+    <script src="charts/linechart/LineChartView.js"></script>
+    <script src="charts/linechart/LineChart.js"></script>
+    <script src="games/GameService.js"></script>
+    <script src="players/PlayerService.js"></script>
+
+  </head>
+
+  <body ng-app="DataDrivenDirectives">
+    <h1>Basketball Scorebook</h1>
+    <div ng-controller="Ctrl">
+      <div>
+        
+        <div>
+          <span>Game:</span><select ng-model="game" ng-options="game.opponent for game in games track by game.gameid"></select>
+          <span>Stat:</span><select ng-model="stat" ng-options="stat.name for stat in stats"></select>
+        </div>
+
+        <column-chart chartoptions="columnChartOptions"></column-chart>
+        
+        <hr/>
+        
+        <div>
+          <span>Player:</span><select ng-model="player" ng-options="player.name for player in players track by player.playerid"></select>
+        </div>
+        
+        <line-chart chartoptions="lineChartOptions"></line-chart>
+        
+        <hr/>
+        
+        <div>
+          <div>View of the data as JSON</div>
+          <div class="jsoncode"><pre>{{ games | json }}</pre></div>
+        </div>
+      </div>
+    </div>
+  </body>
+
+</html>
