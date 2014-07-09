@@ -24,9 +24,9 @@ Using AngularJS to model data and visualize it with D3 AngularJS directives.  Th
 
 Two extremes to create directive interfaces.
 
-1. Use directive scope to map all parameters individually
+### Use directive scope to map all parameters individually
 
-Example: [AngularJS NVD3](cmaurer.github.io/angularjs-nvd3-directives/)
+Example: [AngularJS NVD3](http://cmaurer.github.io/angularjs-nvd3-directives/)
 
 Some of the directives can have 50+ items on their scope, which means you have a LOT of parameters defined in your HTML, lot of coupling to $scope variables, can be tough to keep track of.
 
@@ -39,9 +39,9 @@ Whenever I see a function with too many arguments, code instincts kick in and te
 * Has too many dependencies
 * Typically solve by refactoring into subroutines or objects to encapsulate or replacing arguments with an object (or several)
 
-2. Use a small number of directive scope items to pass larger complex data structures.
+### Use a small number of directive scope items to pass larger complex data structures.
 
-Example: [ng-grid](angular-ui.github.io/ng-grid/)
+Example: [ng-grid](http://angular-ui.github.io/ng-grid/)
 
 This is the method I prefer
 Allows you to fine-tune your $watch and data-binding too, and even put the user in control of that through the directive options
@@ -88,7 +88,7 @@ Each chart (Column Chart and Line Chart) have 4 types of objects:
 
 * Also a part of this github project is an example of doing backend-less development by using a $httpBackend mock
 * Great for isolating frontend from backend for testing and also development to avoid needing a dev node server to provide a REST API.
-* I have taken the code from this github project and broke it out [into a Plunker](plnkr.co/edit/arsvfe) that adds more detail and more examples specifically on this topic.
+* I have taken the code from this github project and broke it out [into a Plunker](http://plnkr.co/edit/arsvfe) that adds more detail and more examples specifically on this topic.
 
 ## D3 Basics
 
