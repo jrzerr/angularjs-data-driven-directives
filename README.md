@@ -2,6 +2,14 @@
 
 Using AngularJS to model data and visualize it with D3 AngularJS directives.  This repo is a companion to a presentation given at the Boise AngularJS meetup on July 2, 2014, which can be seen at:
 
+## View Demo
+
+[View jzerr.github.io](https://jrzerr.github.io/angularjs-data-driven-directives)
+
+[View Demo on jzerr.github.io](https://jrzerr.github.io/angularjs-data-driven-directives/demo)
+
+## View Presentation
+
 [AngularJS Data Driven Directives Presentation at jeremyzerr.com](http://jeremyzerr.com/angularjs-data-driven-directives-presentation)
 
 ## Data Driven Directives
